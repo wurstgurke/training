@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    aagent {
+        docker { image 'maven:3-alpine' }
+    }
     stages {
         stage('Checkout') {
             steps {
