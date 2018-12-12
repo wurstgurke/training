@@ -28,7 +28,7 @@ pipeline {
                         subject: 'test',
                         from: 'andreas@berrou.de',
                         body: "${build.result.toString()}",
-                        attachmentsPattern: './target/surefire-reports/*.xml'
+                        attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
                }
             }
