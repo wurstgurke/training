@@ -29,6 +29,8 @@ pipeline {
                         echo results
                     }
 
+                    echo results
+
                     emailext(
                         to: 'andreas@berrou.de',
                         subject: 'Projekt X: nächtliches Testergebnis: $results',
