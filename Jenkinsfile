@@ -27,7 +27,7 @@ pipeline {
                     script {
                         def version = readFile "${env.WORKSPACE}/target/surefire-reports/training.AppTest.txt"
                         echo version
-                        ${version} = version
+                        \${version} = version
                     }
 
                     emailext(
