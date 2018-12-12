@@ -24,10 +24,7 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: 
-                            '''
-                              There are ${currentBuild.result} 
-                            ''',
+                        body: "${currentBuild.result}",
                         attachmentsPattern: './cucumber/build/html/cucumber-html-reports/overview-features.html'
                     )
                }
