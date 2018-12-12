@@ -26,7 +26,7 @@ pipeline {
 
                     echo 'Building anotherJob and getting the log'
                     script {
-                        def version = readFile "${env.WORKSPACE}/version.txt"
+                        def version = readFile "${env.WORKSPACE}/pipeline.log"
                     }
 
                     emailext(
