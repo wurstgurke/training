@@ -24,10 +24,10 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: '''
-                              <p>There are Tests failing!</p>
-                              <p>Check reports and console output at &QUOT;<a href='$BUILD_URL'>$JOB_NAME [$BUILD_NUMBER]</a>&QUOT;</p>
-                              ''',
+                        body: 
+                            '''
+                              There are ${currentBuild.result} 
+                            ''',
                         attachmentsPattern: './cucumber/build/html/cucumber-html-reports/overview-features.html'
                     )
                }
