@@ -24,11 +24,8 @@ pipeline {
                          find .
                      '''
 
-                    def results = "";
-
                     script {
                         results = readFile "${env.WORKSPACE}/target/surefire-reports/training.AppTest.txt"
-                        echo results
                     }
 
                     echo results
