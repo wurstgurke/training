@@ -25,9 +25,9 @@ pipeline {
                      '''
 
                     script {
-                        def version = readFile "${env.WORKSPACE}/target/surefire-reports/training.AppTest.txt"
-                        echo version
-                        env.DOLL = version
+                        def results = readFile "${env.WORKSPACE}/target/surefire-reports/training.AppTest.txt"
+                        echo results
+                        env.put = ("results", results)
                     }
 
                     emailext(
