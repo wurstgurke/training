@@ -34,7 +34,7 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: "Hello World!",
+                        body: "${version}",
                         attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
                }
