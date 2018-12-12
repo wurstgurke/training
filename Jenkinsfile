@@ -14,12 +14,14 @@ pipeline {
                  ansiColor('xterm') {
                      sh '''
                          mvn test
-                         printenv
                      '''
                  }
             }
             post {
                always {
+                    sh '''
+                         find .                         
+                     '''
                     emailext(
                         to: 'andreas@berrou.de',
                         subject: 'test',
