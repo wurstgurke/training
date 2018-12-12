@@ -27,7 +27,7 @@ pipeline {
                         subject: 'test',
                         from: 'andreas@berrou.de',
                         body: "${currentBuild.result}",
-                        attachmentsPattern: '**/*.AppTest'
+                        attachmentsPattern: './target/surefire-reports/TEST-training.AppTest.xml'
                     )
                }
             }
