@@ -34,9 +34,13 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: '${env.DOLL}',
+                        body: '${build.environment['DOLL']}',
                         attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
+
+                    sh '''
+                         echo 
+                     '''
                }
             }
         }
