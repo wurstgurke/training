@@ -12,6 +12,7 @@ pipeline {
                  ansiColor('xterm') {
                      sh '''
                          mvn test
+                         printenv
                      '''
                  }
             }
