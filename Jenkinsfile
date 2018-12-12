@@ -25,7 +25,7 @@ pipeline {
                         subject: 'test',
                         from: 'andreas@berrou.de',
                         body: "${currentBuild.result}",
-                        attachmentsPattern: '${build.log}'
+                        attachmentsPattern: '**/*.AppTest'
                     )
                }
             }
