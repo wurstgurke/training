@@ -33,7 +33,7 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: "${currentBuild.rawBuild.getLog(100)}",
+                        body: "Hello World!",
                         attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
                }
