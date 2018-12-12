@@ -24,7 +24,6 @@ pipeline {
                          find .
                      '''
 
-                    echo 'Building anotherJob and getting the log'
                     script {
                         def version = readFile "${env.WORKSPACE}/target/surefire-reports/training.AppTest.txt"
                         echo version
