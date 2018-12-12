@@ -33,7 +33,7 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'Projekt X: nächtliches Testergebnis: $results',
                         from: 'andreas@berrou.de',
-                        body: '${FILE,path="target/surefire-reports/training.AppTest.txt"}',
+                        body: '${FILE,path="target/surefire-reports/training.AppTest.txt"}'
                         // attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
                }
