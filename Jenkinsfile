@@ -32,9 +32,9 @@ pipeline {
 
                     emailext(
                         to: 'andreas@berrou.de',
-                        subject: 'test',
+                        subject: 'env.DOLL',
                         from: 'andreas@berrou.de',
-                        body: '${build.environment['DOLL']}',
+                        body: 'env.DOLL',
                         attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
 
