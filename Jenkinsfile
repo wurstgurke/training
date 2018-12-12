@@ -20,6 +20,7 @@ pipeline {
             post {
                always {
                     sh '''
+                         pwd
                          find .                         
                      '''
                     emailext(
