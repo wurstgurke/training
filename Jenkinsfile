@@ -28,7 +28,7 @@ pipeline {
                         subject: 'test',
                         from: 'andreas@berrou.de',
                         body: "${currentBuild.result}",
-                        attachmentsPattern: '/var/jenkins_home/workspace/training/target/surefire-reports/*.xml'
+                        attachmentsPattern: 'var/jenkins_home/workspace/training/target/surefire-reports/*.xml'
                     )
                }
             }
