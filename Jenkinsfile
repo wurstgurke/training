@@ -34,7 +34,7 @@ pipeline {
                         to: 'andreas@berrou.de',
                         subject: 'env.DOLL',
                         from: 'andreas@berrou.de',
-                        body: '$DOLL',
+                        body: '${FILE,path="target/surefire-reports/AppTest.txt.xml"}',
                         attachmentsPattern: 'target/surefire-reports/*.xml'
                     )
 
