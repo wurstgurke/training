@@ -21,14 +21,14 @@ pipeline {
                always {
                     sh '''
                          pwd
-                         find .                         
+                         find .
                      '''
                     emailext(
                         to: 'andreas@berrou.de',
                         subject: 'test',
                         from: 'andreas@berrou.de',
-                        body: "${currentBuild.result}",
-                        attachmentsPattern: './target/surefire-reports/TEST-training.AppTest.xml'
+                        body: "${build.result.toString()}",
+                        attachmentsPattern: './target/surefire-reports/*.xml'
                     )
                }
             }
