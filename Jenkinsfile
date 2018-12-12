@@ -29,8 +29,6 @@ pipeline {
                         def version = readFile "${env.WORKSPACE}/version.txt"
                     }
 
-                    def version = readFile "${env.WORKSPACE}/version.txt"
-                     
                     emailext(
                         to: 'andreas@berrou.de',
                         subject: 'test',
